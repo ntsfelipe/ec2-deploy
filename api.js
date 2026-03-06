@@ -4,6 +4,12 @@ const request = require('supertest');
 const app = express();
 app.use(express.json());
 
+const PORT = 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 const booksDB = [
   { id: 1, title: 'Dom Casmurro', author: 'Machado de Assis', isbn: '978-8535902778',
     category: 'fiction', available: true, registeredAt: '2024-01-10T10:00:00.000Z',
